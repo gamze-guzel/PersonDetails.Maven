@@ -7,11 +7,24 @@ public class PersonHandler {
     private final Person[] personArray;
 
     public PersonHandler(Person[] personArray) {
+
         this.personArray = personArray;
     }
 
     public String whileLoop() {
         String result = "";
+        int counter = 0;
+        Person[] aArr = new Person[personArray.length];
+        while (counter < personArray.length) {
+            Person currentPerson = personArray[counter];
+            String sPerson = currentPerson.toString();
+            result += sPerson;
+            counter++;
+        }
+        return result;
+    }
+
+
         // create a `counter`
         // while `counter` is less than length of array
             // begin loop
@@ -21,13 +34,25 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
 
             // end loop
-        return result;
-    }
+
+
 
 
 
     public String forLoop() {
         String result = "";
+        int counter = 0;
+        Person[] aArr = new Person[personArray.length];
+        for (int i=0; i< getPersonArray().length; i++) {
+            Person currentPerson = personArray[counter];
+            String sPerson = currentPerson.toString();
+            result += sPerson;
+            counter++;
+        }
+        return result;
+
+
+
         // identify initial value
         // identify terminal condition
         // identify increment
@@ -39,13 +64,31 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
+
     }
 
 
 
     public String forEachLoop() {
         String result = "";
+        int counter = 0;
+        Person[] aArr = new Person[personArray.length];
+        for (Person s : personArray) {
+            String sPerson = s.toString();
+            result += sPerson;
+            counter++;
+        }
+        return result;
+    }
+
+
+
+
+
+
+
+
+
         // identify array's type
         // identify array's variable-name
 
@@ -55,8 +98,7 @@ public class PersonHandler {
                 // append `stringRepresentation` to `result` variable
             // end loop
 
-        return result;
-    }
+
 
 
     public Person[] getPersonArray() {
